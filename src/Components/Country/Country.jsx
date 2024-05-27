@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Country.css';
+import PropTypes from 'prop-types';
 
 const Country = ({ country, handleVisitedCountry, handleVisitedFlags }) => {
     const { name, flags, population, area, cca3 } = country;
@@ -27,5 +28,11 @@ const Country = ({ country, handleVisitedCountry, handleVisitedFlags }) => {
         </div>
     );
 };
+
+Country.propTypes = {
+    country: PropTypes.any.isRequired,
+    handleVisitedCountry: PropTypes.any,
+    handleVisitedFlags: PropTypes.any,
+}
 
 export default Country;
